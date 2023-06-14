@@ -2,12 +2,26 @@ var largura = 0;
 var altura = 0;
 var vidas = 1;
 var cronometro = 10;
+var tempo;
 
 function ajustaTamanhoTela(){
     largura = window.innerWidth;
     altura = window.innerHeight;
 }
 
+var dificuldade = window.location.search
+dificuldade = dificuldade.replace('?', '')
+
+if(dificuldade == "facil"){
+    tempo = 1500
+}
+if(dificuldade == "normal"){
+    tempo = 1000
+}
+if(dificuldade == "dificil"){
+    tempo = 500
+}
+console.log(tempo + " " + dificuldade)
 
 
 setInterval(function () {
